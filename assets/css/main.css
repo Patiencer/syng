@@ -146,7 +146,11 @@ a:after {
 
 #showcase {
 	display: block;
-	background-color: #34495e;
+   background-color: #EF1D41;
+   background: #EF1D41;
+   background: -webkit-linear-gradient(#EF2B1E, #EF1063);
+   background: -moz-linear-gradient(#EF2B1E, #EF1063);
+   background: linear-gradient(#EF2B1E, #EF1063);
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
