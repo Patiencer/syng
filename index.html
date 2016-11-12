@@ -16,11 +16,15 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <!-- CSS for Sweetalert -->
+    <link href="assets/css/sweetalert.css" rel="stylesheet">
+
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -114,7 +118,7 @@
 				<div class="col-lg-4">
 					<!-- <img src="assets/img/intro03.png" alt=""> -->
 					<h3>Cross-Platform</h3>
-					<p>Syng works offline on Mac OS X, Windows, and Linux desktop operating systems.</p>
+					<p>Syng works offline on macOS, Windows, and Linux operating systems.</p>
 				</div>
 			</div>
       <div class="row">
@@ -175,27 +179,39 @@
             <br>
 				<br>
 				<div class="col-lg-4">
-					<h4>Download for OS X</h4>
-               <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.1.2/Syng-darwin-x64.zip" class="btn btn-lg btn-success">OS X 64-bit</a>
+          <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.1.2/Syng-darwin-x64.zip" class="btn btn-lg btn-success" onclick="downloadReady()">Download for macOS</a>
+				  <br>
+          <br>
+          <br>
+          <br>
 				</div>
 				<div class="col-lg-4">
-					<h4>Download for Windows</h4>
-               <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.1.1/Syng-win32-ia32.zip" class="btn btn-lg btn-success">Windows 32-bit</a>
-               <br>
-               <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.1.1/Syng-win32-x64.zip" class="btn btn-lg btn-success">Windows 64-bit</a>
+          <a href="#download" class="btn btn-lg btn-success" id="windowsDownload">Download for Windows</a>
+          <br>
+          <br>
+          <br>
+          <br>
 				</div>
 				<div class="col-lg-4">
-					<h4>Download for Linux</h4>
+          <a href="#download" class="btn btn-lg btn-success" id="linuxDownload">Download for Linux</a>
+          <br>
+          <br>
+          <br>
+          <br>
+					<!-- <h4>Download for Linux</h4>
                <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.1.1/Syng-linux-ia32.tar.gz" class="btn btn-lg btn-success">Linux 32-bit</a>
+               <a href="#download" class="btn btn-lg btn-success">.tar.gz 32-bit</a>
                <br>
                <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.1.1/Syng-linux-x64.tar.gz" class="btn btn-lg btn-success">Linux 64-bit</a>
+               <a href="#download" class="btn btn-lg btn-success">.tar.gz 64-bit</a>
                <br>
                <br>
+               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_ia36.deb" class="btn btn-lg btn-success">.deb 32-bit</a>
+               <br>
+               <br>
+               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_amd64.deb" class="btn btn-lg btn-success">.deb 64-bit</a>
+               <br>
+               <br> -->
 				</div>
 			</div>
 		</div><!--/ .container -->
@@ -244,7 +260,7 @@
 
 	<div id="c">
 		<div class="container">
-			<div class="pull-left"><p>Created with Love in Kalamazoo by <a href="http://stosur.info">Preston Stosur-Bassett</a></div>
+			<div class="pull-left"><p>Created with Love in Kalamazoo &amp; Beijing by <a href="http://stosur.info">Preston Stosur-Bassett</a></div>
          <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 License</a>
          </p>
 		</div>
@@ -255,5 +271,47 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.js"></script>
+    <script>
+      const win32 = "";
+      const win64 = "";
+      const lin32 = "";
+      const lin64 = "";
+      const deb32 = "";
+      const deb64 = "";
+      $(document).ready(function() {
+        // The event handlers to determine the intallation candidate
+        $("#windowsDownload").click(function() {
+          swal({
+            title: "<h3>Please choose an installation candidate.</h3>",
+            text: "<a href='"+win64+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='"+win32+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 32-bit</a>",
+            html: true,
+            showConfirmButton: false,
+            showCancelButton: true,
+            type: "info"
+          });
+        });
+
+        $("#linuxDownload").click(function() {
+          swal({
+            title: "<h3>Please choose an installation candidate.</h3>",
+            text: "<a href='"+lin64+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.tar.gz</strong> 64-bit</a>&nbsp;&nbsp;<a href='"+lin32+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.tar.gz</strong> 32-bit</a><br><br><a href='"+deb64+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.deb</strong> 64-bit</a>&nbsp;&nbsp;<a href='"+deb64+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.deb</strong> 32-bit</a>",
+            html: true,
+            showConfirmButton: false,
+            showCancelButton: true,
+            type: "info"
+          });
+        });
+      });
+
+      function downloadReady() {
+        swal({
+          title: "Thank You for Using Syng!",
+          text: "Your download will begin shortly! We appreciate your support!",
+          type: "success",
+          showCancelButton: false,
+          showConfirmButton: true
+        });
+      }
+    </script>
   </body>
 </html>
