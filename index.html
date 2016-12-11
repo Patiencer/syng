@@ -283,7 +283,7 @@
         $("#windowsDownload").click(function() {
           swal({
             title: "<h3>Please choose an installation candidate.</h3>",
-            text: "<a href='"+win64+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='"+win32+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 32-bit</a>",
+            text: "<a href='"+win64+"' class='btn btn-lg btn-success' onclick='downloadReadyWindows()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='"+win32+"' class='btn btn-lg btn-success' onclick='downloadReadyWindows()'>Windows 32-bit</a>",
             html: true,
             showConfirmButton: false,
             showCancelButton: true,
@@ -305,8 +305,18 @@
 
       function downloadReady() {
         swal({
-          title: "Thank You for Using Syng!",
+          title: "Thank You for using Syng!",
           text: "Your download will begin shortly! We appreciate your support!",
+          type: "success",
+          showCancelButton: false,
+          showConfirmButton: true
+        });
+      }
+
+      function downloadReadyWindows() {
+        swal({
+          title: "Thank you for using Syng!",
+          text: "Your Download will begin shortly! After Syng is installed, you can add it to your Desktop, Taskbar, or Start Menu by navigating to C:/Users/<user>/AppData/Local/Syng and right clicking on Syng.exe. Thank you for your support!",
           type: "success",
           showCancelButton: false,
           showConfirmButton: true
