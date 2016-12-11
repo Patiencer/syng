@@ -146,7 +146,7 @@
             </p>
             <h3>Development Status</h3>
             <p>
-               Syng is currently in <b>beta (v0.2.0)</b> and not everything is fully functional yet. You may experience some bugs and runtime issues.
+               Syng is currently in <b>beta (v0.2.1)</b> and not everything is fully functional yet. You may experience some bugs and runtime issues.
                If you encounter a bug please <a href="https://github.com/sotch-pr35mac/syng/issues">report the issue on the GitHub repository</a>.
             </p>
             <h3>Contributing</h3>
@@ -272,8 +272,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/bootstrap.js"></script>
     <script>
-      const win32 = "";
-      const win64 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng-win32-x64.7z";
+      const win32 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.1/Install_Syng-Windows-ia32.zip";
+      const win64 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.1/Install_Syng-Windows-x64.zip";
       const lin32 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng-linux-ia32.tar.gz";
       const lin64 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng-linux-x64.tar.gz";
       const deb32 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_i386.deb";
@@ -283,7 +283,7 @@
         $("#windowsDownload").click(function() {
           swal({
             title: "<h3>Please choose an installation candidate.</h3>",
-            text: "<a href='"+win64+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='#download' class='btn btn-lg btn-success' onclick='windows32Bit()'>Windows 32-bit</a>",
+            text: "<a href='"+win64+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='"+win32+"' class='btn btn-lg btn-success' onclick='downloadReady()'>Windows 32-bit</a>",
             html: true,
             showConfirmButton: false,
             showCancelButton: true,
@@ -311,10 +311,6 @@
           showCancelButton: false,
           showConfirmButton: true
         });
-      }
-
-      function windows32Bit() {
-        swal("32-bit Unsupported", "Windows 32-bit is currently unsupported. Please check back later.", "error");
       }
     </script>
   </body>
