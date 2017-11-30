@@ -1,327 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Syng is a free open source chinese to english dictionary made for the desktop.">
-    <meta name="author" content="Preston Stosur-Bassett">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewpoirt" content="width=device-width, initial-scale=1">
+  <title>Syng 词应 | Chinese-to-English Dictionary</title>
+  <meta name="description" content="Syng is a free, open source, cross platform Chinese-to-English dictionary." />
+  <meta name="keywords" content="syng, 词应, free, open source, cross platform, chinese, english, dictionary, mac, windows, linux, ubuntu, 词典, 应用, 免费, preston, wang, stosur, bassett" />
+  <meta name="author" content="Preston Wang-Stosur-Bassett" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Syng | Chinese-to-English Dictionary</title>
+  <!-- Load Styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/syng.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/sweetalert.css" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <!-- Load Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Load Scripts -->
+  <script src="assets/js/modernizr.custom.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+</head>
 
-    <!-- CSS for Sweetalert -->
-    <link href="assets/css/sweetalert.css" rel="stylesheet">
+<body>
+  <div class="page-container">
+    <!-- Page header bar -->
+    <header id="ha-header" class="ha-header ha-header-shrink">
+      <div class="ha-header-perspective">
+        <div class="ha-header-front">
+          <h2><span>Syng | 词应</span></h2>
+          <nav class="cl-effect-3">
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#download">Download</a>
+            <a href="https://github.com/sotch-pr35mac/syng">Github</a>
+            <a href="https://ko-fi.com/A501IQQ">Donate</a>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/sweetalert.min.js"></script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-73708136-3', 'auto');
-        ga('send', 'pageview');
-   </script>
-
-
-  </head>
-
-  <body data-spy="scroll" data-offset="0" data-target="#navigation">
-
-    <!-- Fixed navbar -->
-	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="#"><b>Syng</b></a>
-	        </div>
-	        <div class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="#home" class="smothscroll">Home</a></li>
-	            <li><a href="#about" class="smothscroll">About</a></li>
-	            <li><a href="#download" class="smothScroll">Download</a></li>
-	            <li><a href="https://github.com/sotch-pr35mac/syng" target="_blank">View on Github</a></li>
-	          </ul>
-	        </div><!--/.nav-collapse -->
-	      </div>
-	    </div>
-
-
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-	    <div class="container">
-	    	<div class="row centered">
-	    		<div class="col-lg-12">
-					<h1>Welcome To <b>Syng 词应</b></h1>
-					<h3>Syng 词应 is a free, open-source, Chinese-to-English dictionary app.</h3>
-					<br>
-	    		</div>
-
-	    		<div class="col-lg-2">
-	    			<!--
-               <h5></h5>
-	    			<p></p>
-	    			<img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow1.png">
-               -->
-	    		</div>
-	    		<div class="col-lg-8">
-	    			<img class="img-responsive" src="assets/img/welcome.png" alt="">
-	    		</div>
-	    		<div class="col-lg-2">
-	    			<br>
-	    			<!--
-               <img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow2.png">
-	    			<h5></h5>
-	    			<p></p>
-               -->
-	    		</div>
-	    	</div>
-	    </div> <!--/ .container -->
-	</div><!--/ #headerwrap -->
-
-
-	<section id="desc" name="desc"></section>
-	<!-- INTRO WRAP -->
-	<div id="about">
-		<div class="container">
-			<div class="row centered">
-				<h1>Features</h1>
-				<br>
-				<br>
-				<div class="col-lg-4">
-					<!-- <img src="assets/img/intro01.png" alt=""> -->
-					<h3>Search</h3>
-					<p>Syng allows you to search using English, Chinese (both traditional and simplified characters), and pinyin. You can also save your searches to your <i>"Bookmarks"</i> so that you can reference them later.</p>
-				</div>
-				<div class="col-lg-4">
-					<!-- <img src="assets/img/intro02.png" alt=""> -->
-					<h3>Study</h3>
-					<p>Syng lets you study the characters you want by generating flashcards for you. Syng also tests you on your knowledge and progress of your Chinese to measure your language development.</p>
-				</div>
-				<div class="col-lg-4">
-					<!-- <img src="assets/img/intro03.png" alt=""> -->
-					<h3>Cross-Platform</h3>
-					<p>Syng works offline on macOS, Windows, and Linux operating systems.</p>
-				</div>
-			</div>
+    <!-- Sections with triggers -->
+    <section id="landing">
+      <div>
+        <center>
+          <h1>Syng | 词应</h1>
+          <h4 class="syng-subtitle">A free, open-source, cross-platform, Chinese-to-English dictionary</h4>
+          <img src="assets/img/mainscreen.png" alt="" class="welcome-img">
+        </center>
+      </div>
+    </section>
+    <section id="features">
+      <div>
+        <center>
+          <h1 class="ha-waypoint section-title" data-animate-down="ha-header-small" data-animate-up="ha-header-shrink">Features</h1>
+        </center>
+        <div class="row">
+          <div class="four columns">
+            <center>
+              <h3 class="section-title">Search</h3>
+              <p>Search in English, Chinese (traditional and simplified characters), and even in pinyin. Inspect the component characters that make-up a word and even save searches to vocab lists.</p>
+            </center>
+          </div>
+          <div class="four columns">
+            <center>
+              <h3 class="section-title">Bookmarks</h3>
+              <p>Save words to bookmarks and custom vocab lists, share vocab lists with classmates, and take notes on individual words.</p>
+            </center>
+          </div>
+          <div class="four columns">
+            <center>
+              <h3 class="section-title">Study</h3>
+              <p>Study your vocab lists with Syng's automatically generated flashcards. Make sure you are learning on track with Syng's quiz feature.</p>
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="four columns">
+            <center>
+              <h4 class="section-title">Cross Platform</h4>
+              <p>No matter your operating system, Syng will run on your computer. Syng works on macOS, Windows, and Linux, all without needing to connect to the internet to use.</p>
+            </center>
+          </div>
+          <div class="four columns">
+            <center>
+              <h4 class="section-title">Free</h4>
+              <p>Syng is free to use and free to modify, now and forever. If you want to donate, you can <a href="https://ko-fi.com/A501IQQ">here</a>. You can also contribute to the project <a href="https://github.com/sotch-pr35mac/syng">here</a>.</p>
+            </center>
+          </div>
+          <div class="four columns">
+            <center>
+              <h4 class="section-title">Tools</h4>
+              <p>A set of handy tools to turn characters into pinyin, turn tone numbers into tone marks, and to convert between simplified and traditional characters.</p>
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <center>
+            <h3 class="section-title">What's New in Version 1.0.0?</h3>
+            <p>
+              Version 1.0.0 is the biggest release of Syng yet! Some new changes include:
+            </p>
+            <ul>
+              <li>70% increase in startup time</li>
+              <li>All new user interface</li>
+              <li>New icon</li>
+              <li>Stability improvements</li>
+            </ul>
+            <p>
+              For a full list of changes, please see <a href="https://github.com/sotch-pr35mac/syng/blob/master/CHANGELOG.md">the changelog</a>.
+            </p>
+          </center>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <center>
+        <h1 class="section-title">About</h1>
+      </center>
+      <div class="row">
+        <p>
+          <b>About Syng:</b> Syng was created to be a simple, yet full-featured Chinese language study tool. Syng is free, cross platform, and open source, so that no matter how much money you have, or what computer operating system you use, you can enjoy Syng and all of its features. You won't find any pay to use premium features in Syng. In fact, if you think Syng should have a specific feature, you can go ahead and contribute to the project <a href="https://github.com/sotch-pr35mac/syng">here</a>.
+          <br>
+          <b>About The Name:</b> Syng is a stylized spelling of cíyīng, the pinyin for 词应. 词应 is short for 词典应用, literally translating to Dictionary App.
+          <br>
+          <b>Developers Welcome:</b> If you're interested in contributing to Syng in whatever capacity you can, feel free to <a href="mailto:p.wanstobas@gmail.com">contact the maintainer</a>.
+        </p>
+      </div>
+    </section>
+    <section id="screenshots">
+      <center>
+        <h1 class="section-title">Screenshots</h1>
+      </center>
       <div class="row">
         <center>
-          <h2>Additional Features</h2>
+          <img class="screenshotSlide" src="assets/img/screenshots/bookmarks.png">
+          <img class="screenshotSlide" src="assets/img/screenshots/test.png">
+          <img class="screenshotSlide" src="assets/img/screenshots/flashcards.png">
+          <img class="screenshotSlide" src="assets/img/screenshots/tools.png">
+          <img class="screenshotSlide" src="assets/img/screenshots/large-chars.png">
         </center>
-        <br>
-        <ul>
-          <li><b>Prettify Pinyin</b>: Convert pinyin with tone numbers to pinyin with tone marks.</li>
-          <li><b>Convert Characters</b>: Convert between traditional and simplified characters.</li>
-        </ul>
-        <br>
+        <br id="download">
+        <button class="pull-left button" id="screenshot-slide-back">&#10094;</button>
+        <button class="pull-right button" id="screenshot-slide-forward">&#10095;</button>
       </div>
-         <div class="row">
-            <center>
-               <h1>About</h1>
-            </center>
-            <p>Syng is a free, open-source, Chinese-To-English dictionary app that makes it easy to lookup words
-               quickly. Syng is built for desktop operating systems, and there are no plans to build something for
-               mobile platforms. <i>For a good mobile platform alternative, the app <a href="https://www.pleco.com/">Pleco</a> is an excellent option</i>
-            </p>
-            <h3>Name</h3>
-            <p>
-               Syng is a stylized spelling of Ciying, the Pinyin for 词应. 词应 has been shorted from 词典应用, literally translating to Dictionary App.
-            </p>
-            <h3>Development Status</h3>
-            <p>
-               Syng is currently in <b>beta (v0.2.1)</b> and not everything is fully functional yet. You may experience some bugs and runtime issues.
-               If you encounter a bug please <a href="https://github.com/sotch-pr35mac/syng/issues">report the issue on the GitHub repository</a>.
-            </p>
-            <h3>Contributing</h3>
-            <p>
-               Syng is publically hosted on <a href="https://github.com/sotch-pr35mac/syng">GitHub</a> and welcome to community development.
-               <ol>
-                  <li>Fork it!</li>
-                  <li>Create a branch <code>git checkout my-feature</code></li>
-                  <li>Commit your changes</li>
-                  <li>Submit a pull request</li>
-               </ol>
-               <h4>Getting Started</h4>
-               <ol>
-                  <li>First go to the project directory <code>cd /path/to/project</code></li>
-                  <li>Install the dependencies <code>npm install</code></li>
-                  <li>Run Syng <code>electron .</code></li>
-               </ol>
-            </p>
-         </div>
-			<br>
-			<hr>
-	    </div> <!--/ .container -->
-	</div><!--/ #introwrap -->
+    </section>
+    <section>
+      <center>
+        <h1 class="section-title">Download</h1>
+      </center>
+      <div class="row">
+        <div class="four columns">
+          <center>
+            <a class="button button-primary download-button" href="https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-macOS.dmg" id="download-macos">macOS</a>
+          </center>
+        </div>
+        <div class="four columns">
+          <center>
+            <button class="button button-primary download-button" id="download-windows">Windows</button>
+          </center>
+        </div>
+        <div class="four columns">
+          <center>
+            <button class="button button-primary download-button" id="download-linux">Linux</button>
+          </center>
+        </div>
+      </div>
+      <br>
+      <div class="row" style="display: none;" id="linux-installation-instructions">
+        <h4 class="section-title">Using the Installer Script</h4>
+        <div>
+          <p>To install Syng from the command line with the distro-agnostic installer, enter the following lines of code into your terminal. <b>It's good to be cautious about what you are putting in your terminal, you can read the <a href="https://gist.github.com/sotch-pr35mac/3120195991d8879ef82569720371f18d">64-bit install script here</a> and the <a href="">32-bit install script here</a>.</b></p>
+          <div class="row">
+            <div class="six columns">
+              <h6 class="section-title">Linux 64-bit</h6>
+              <code class="installer">
+                wget -O- https://goo.gl/1WdZyN | bash
+              </code>
+            </div>
+            <div class="six columns">
+              <h6 class="section-title">Linux 32-bit</h6>
+              <code class="installer">
+                wget -O- https://goo.gl/h42ejc | bash
+              </code>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h4 class="section-title">Manual Installation</h4>
+        <div>
+          <p>Alternatively, if you aren't comfortable running the installer script, you can download the prebuilt package from the links below and follow the installation instructions provided.</p>
+          <div class="row">
+            <div class="six columns">
+              <center>
+                <a class="button button-primary download-button"  href="https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-linux-x64.tar.gz">Linux 64-bit</a>
+              </center>
+            </div>
+            <div class="six columns">
+              <center>
+                <a class="button button-primary download-button" href="https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-linux-ia32.tar.gz">Linux 32-bit</a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<!-- FEATURES WRAP -->
-	<div id="download">
-		<div class="container">
-			<div class="row centered">
-				<h1 class="centered">Download</h1>
-            <br>
-				<br>
-				<div class="col-lg-4">
-          <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng-macOS-v0.2.0.dmg" class="btn btn-lg btn-success" onclick="downloadReady()">Download for macOS</a>
-				  <br>
-          <br>
-          <br>
-          <br>
-				</div>
-				<div class="col-lg-4">
-          <a href="#download" class="btn btn-lg btn-success" id="windowsDownload">Download for Windows</a>
-          <br>
-          <br>
-          <br>
-          <br>
-				</div>
-				<div class="col-lg-4">
-          <a href="#download" class="btn btn-lg btn-success" id="linuxDownload">Download for Linux</a>
-          <br>
-          <br>
-          <br>
-          <br>
-					<!-- <h4>Download for Linux</h4>
-               <br>
-               <a href="#download" class="btn btn-lg btn-success">.tar.gz 32-bit</a>
-               <br>
-               <br>
-               <a href="#download" class="btn btn-lg btn-success">.tar.gz 64-bit</a>
-               <br>
-               <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_ia36.deb" class="btn btn-lg btn-success">.deb 32-bit</a>
-               <br>
-               <br>
-               <a href="https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_amd64.deb" class="btn btn-lg btn-success">.deb 64-bit</a>
-               <br>
-               <br> -->
-				</div>
-			</div>
-		</div><!--/ .container -->
-	</div><!--/ #features -->
+    <br>
+    <br>
+    <br>
+    <br>
 
+    <!-- Footer -->
+    <footer>
+      <center>
+        <a class="footer-text">
+          built with Love from <a class="footer-text locations-label" id="locations-label">All Around the World</a><a class="footer-text"> by </a><a href="http://stosur.info" class="footer-text">Preston Wang-Stosur-Bassett</a>
+        </a>
+        <br>
+        <a class="footer-text">
+          Syng is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" class="footer-text">GNU Public License v3</a>
+        </a>
+      </center>
+    </footer>
+  </div>
 
-	<section id="showcasee" name="showcase"></section>
-	<div id="showcase">
-		<div class="container">
-			<div class="row">
-				<h1 class="centered">Screenshots</h1>
-				<br>
-				<div class="col-lg-8 col-lg-offset-2">
-					<div id="carousel-example-generic" class="carousel slide">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators">
-					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                   <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                   <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-					  </ol>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="end-page" class="ha-waypoint" data-animate-down="ha-header-color" data-animate-up="ha-header-small"></div>
 
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					    <div class="item active">
-					      <img src="assets/img/bookmarks.png" alt="">
-					    </div>
-					    <div class="item">
-					      <img src="assets/img/flashcard-1.png" alt="">
-					    </div>
-                   <div class="item">
-                      <img src="assets/img/flashcard-2.png" alt="">
-                   </div>
-                   <div class="item">
-                      <img src="assets/img/welcome.png" alt="">
-                   </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-			<br>
-			<br>
-			<br>
-		</div><!-- /container -->
-	</div>
+  <!-- Additional Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script>
+			var $head = $( '#ha-header' );
+			$( '.ha-waypoint' ).each( function(i) {
+				var $el = $( this ),
+					animClassDown = $el.data( 'animateDown' ),
+					animClassUp = $el.data( 'animateUp' );
 
-	<div id="c">
-		<div class="container">
-			<div class="pull-left"><p>Created with Love in Kalamazoo &amp; Beijing by <a href="http://stosur.info">Preston Stosur-Bassett</a></div>
-         <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 License</a>
-         </p>
-		</div>
-	</div>
+				$el.waypoint( function( direction ) {
+					if( direction === 'down' && animClassDown ) {
+						$head.attr('class', 'ha-header ' + animClassDown);
+					}
+					else if( direction === 'up' && animClassUp ){
+						$head.attr('class', 'ha-header ' + animClassUp);
+					}
+				}, { offset: '100%' } );
+			} );
+	</script>
+  <script>
+    var win32 = "https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-Windows-setup-ia32.exe";
+    var win64 = "https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-Windows-setup-x64.exe";
+    var linux32 = "https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-linux-ia32.tar.gz";
+    var linux64 = "https://github.com/sotch-pr35mac/syng/releases/download/v1.0.0/Syng-linux-x64.tar.gz";
 
+    function downloadReady() {
+      swal({
+        title: "Thank you for using Syng | 词应",
+        text: "Your download will begin shortly. We appreciate your support!",
+        type: "success",
+        showCancelButton: false,
+        showConfirmButton: true
+      });
+    }
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.js"></script>
-    <script>
-      const win32 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.1/Install_Syng-Windows-ia32.zip";
-      const win64 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.1/Install_Syng-Windows-x64.zip";
-      const lin32 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng-linux-ia32.tar.gz";
-      const lin64 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng-linux-x64.tar.gz";
-      const deb32 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_i386.deb";
-      const deb64 = "https://github.com/sotch-pr35mac/syng/releases/download/v0.2.0/Syng_0.2.0_amd64.deb";
-      $(document).ready(function() {
-        // The event handlers to determine the intallation candidate
-        $("#windowsDownload").click(function() {
-          swal({
-            title: "<h3>Please choose an installation candidate.</h3>",
-            text: "<a href='"+win64+"' class='btn btn-lg btn-success' onclick='downloadReadyWindows()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='"+win32+"' class='btn btn-lg btn-success' onclick='downloadReadyWindows()'>Windows 32-bit</a>",
-            html: true,
-            showConfirmButton: false,
-            showCancelButton: true,
-            type: "info"
-          });
-        });
-
-        $("#linuxDownload").click(function() {
-          swal({
-            title: "<h3>Please choose an installation candidate.</h3>",
-            text: "<a href='"+lin64+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.tar.gz</strong> 64-bit</a>&nbsp;&nbsp;<a href='"+lin32+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.tar.gz</strong> 32-bit</a><br><br><a href='"+deb64+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.deb</strong> 64-bit</a>&nbsp;&nbsp;<a href='"+deb64+"' class='btn btn-lg btn-success' onclick='downloadReady()'><strong>.deb</strong> 32-bit</a>",
-            html: true,
-            showConfirmButton: false,
-            showCancelButton: true,
-            type: "info"
-          });
+    $(document).ready(function() {
+      //Handle the locations popup
+      $("#locations-label").click(function() {
+        swal({
+          title: "<h3>Where Has Syng Been Built?</h3>",
+          text: "<p>Syng has been worked on all around the world, including the following cities: </p><ul><li>Kalamazoo, Michigan</li><li>Chicago, Illinois</li><li>Beijing, China</li><li>Harbin, Heilongjiang</li><li>Ann Arbor, Michigan</li></ul>",
+          html: true,
+          showCancelButton: false,
+          showConfirmButton: true
         });
       });
 
-      function downloadReady() {
-        swal({
-          title: "Thank You for using Syng!",
-          text: "Your download will begin shortly! We appreciate your support!",
-          type: "success",
-          showCancelButton: false,
-          showConfirmButton: true
-        });
+      //Handle slides for screenshots
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlide(n) {
+        showSlides(slideIndex += n);
       }
 
-      function downloadReadyWindows() {
-        swal({
-          title: "Thank you for using Syng!",
-          text: "Your Download will begin shortly! After Syng is installed, you can add it to your Desktop, Taskbar, or Start Menu by navigating to C:/Users/<user>/AppData/Local/Syng and right clicking on Syng.exe. Thank you for your support!",
-          type: "success",
-          showCancelButton: false,
-          showConfirmButton: true
-        });
+      function showSlides(n) {
+        var i;
+        var x = document.getElementsByClassName("screenshotSlide");
+        if(n > x.length) {
+          slideIndex = 1;
+        }
+        if(n < 1) {
+          slideIndex = x.length;
+        }
+        for(i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
       }
-    </script>
-  </body>
+
+      $("#screenshot-slide-back").click(function() {
+        plusSlide(-1);
+      });
+
+      $("#screenshot-slide-forward").click(function() {
+        plusSlide(+1);
+      });
+
+      //Handle download buttons
+      $("#download-macos").click(function() {
+        downloadReady();
+      });
+      $("#download-windows").click(function() {
+        swal({
+          title: "<h3>Please choose an installation candidate.</h3>",
+          text: "<a href='"+win64+"' class='button button-primary download-button' onclick='downloadReady()'>Windows 64-bit</a>&nbsp;&nbsp;<a href='"+win32+"' class='button button-primary download-button' onclick='downloadReady()'>Windows 32-bit</a>",
+          html: true,
+          showConfirmButton: false,
+          showCancelButton: true,
+          type: 'info'
+        });
+      });
+      $("#download-linux").click(function() {
+        $("#linux-installation-instructions").show();
+      });
+    });
+  </script>
+</body>
 </html>
