@@ -347,8 +347,8 @@ section p {
 .ha-header-color .ha-header-front,
 .ha-header-color .ha-header-bottom {
 	/*background: #f3796c;*/
-  background: -webkit-linear-gradient(#EF2B1E, #EF1063);
-  background: linear-gradient(#EF2B1E, #EF1063);
+  background: -webkit-linear-gradient(#FF8A00, #EF1063);
+  background: linear-gradient(#FF8A00, #EF1063);
   opacity: 0.88;
 }
 
